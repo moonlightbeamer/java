@@ -39,7 +39,9 @@ public class excercise {
         int r1 = indexes[k] - indexes[k-1];
         int r2 = indexes[k+1] - indexes[k];
         if (r1 <= r2) {
-          System.out.print(String.valueOf(input.charAt(i)zoo) + alphabet.charAt(indexes[k-1]) + consonant.charAt(consonant.indexOf(String.valueOf(input.charAt(i)))+1));
+          System.out.print(String.valueOf(input.charAt(i)) + alphabet.charAt(indexes[k-1]) + consonant.charAt(consonant.indexOf(String.valueOf(input.charAt(i)))+1));
+        } else {
+          System.out.print(String.valueOf(input.charAt(i)) + alphabet.charAt(indexes[k+1]) + consonant.charAt(consonant.indexOf(String.valueOf(input.charAt(i)))+1));
         }
       }
     }
