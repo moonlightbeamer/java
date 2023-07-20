@@ -16,7 +16,7 @@ public class excercise {
       System.out.println(line);
       hp.close();
     */
-    ///* substituting consonants
+    /* substituting consonants
     Scanner hp = new Scanner(System.in);
     String alphabet = "abcdefghijklmnopqrstuvwxyz";
     String vowel = "aeiou";
@@ -46,5 +46,85 @@ public class excercise {
       }
     }
     hp.close();
+    */
+    /*
+    Scanner hp = new Scanner(System.in);
+    int[] input = new int[11];
+    for (int i=0; i<input.length; i++) {
+      input[i] = hp.nextInt();
+    }
+    int sum = 0;
+    for (int i=0; i<input.length; i++) {
+      sum += input[i];
+    }
+    System.out.println("Sum is: " + sum);
+    
+    int max = input[0];
+    for (int i=1; i<input.length; i++) {
+      if (input[i] > max) {
+        max = input[i];
+      }
+    }
+    System.out.println("max is: " + max);
+    hp.close();
+    */
+    /* https://dmoj.ca/problem/ccc16s2 tandem bicycle
+    Scanner hp = new Scanner(System.in);
+    int Question = hp.nextInt();
+    int N = hp.nextInt();
+    int[] a = new int[N];
+    int[] b = new int[N];
+    for (int i=0; i<N; i++) {
+      a[i] = hp.nextInt();
+    }
+    for (int i=0; i<N; i++) {
+      b[i] = hp.nextInt();
+    }
+    Arrays.sort(a);
+    Arrays.sort(b);
+    int speed = 0;
+    if (Question==1) {
+      // min
+      for (int i=0; i<N; i++) {
+        speed += Math.max(a[N-1-i], b[N-1-i]);
+      }
+      System.out.println("Min is: " + speed);
+    } else if (Question==2) {
+      // max
+      for (int i=0; i<N; i++) {
+        speed += Math.max(a[N-1-i], b[i]);
+      }
+      System.out.println("Max is: " + speed);
+    } else {
+      System.out.println("wrong question asked.");
+    }
+    hp.close();
+    */
+    ///* https://www.dmoj.ca/problem/ccc15s2 jersey size
+    Scanner hp = new Scanner(System.in);
+    int J = hp.nextInt();
+    int A = hp.nextInt();
+    char[] js = new char[J];
+    char[] as = new char[A];
+    int[] an = new int[A];
+    for (int i=0; i<J; i++) {
+      // get qty J of size
+      js[i] = hp.next().charAt(0);
+    }
+    for (int i=0; i<A; i++) {
+      // get qty A of size - number pair
+      as[i] = hp.next().charAt(0);
+      an[i] = hp.nextInt();
+    }
+    int match = 0;
+    for (int i=0; i<A; i++) {
+      if (js[an[i]-1]<=as[i]) {
+        js[an[i]-1] = 'X';  // if matched, meaning this number with the available size is taken, need to be marked not available, by give size X = extra small.
+        match ++;
+      }
+    }
+    System.out.println(match);
+    hp.close();
+    //*/
   }
 }
