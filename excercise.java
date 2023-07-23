@@ -100,7 +100,7 @@ public class excercise {
     }
     hp.close();
     */
-    ///* https://www.dmoj.ca/problem/ccc15s2 jersey size
+    /* https://www.dmoj.ca/problem/ccc15s2 jersey size
     Scanner hp = new Scanner(System.in);
     int J = hp.nextInt();
     int A = hp.nextInt();
@@ -124,6 +124,48 @@ public class excercise {
       }
     }
     System.out.println(match);
+    for (int i=0; i<J; i++) {
+      System.out.println(String.valueOf(js[i]));
+    }
+    hp.close();
+    */
+    /* https://dmoj.ca/problem/ccc19j3
+    Scanner hp = new Scanner(System.in);
+    int N = hp.nextInt();
+    int count =1;
+    for (int i=0; i<N; i++) {
+      String line = hp.next() + " ";
+      for (int j=0; j<line.length()-1; j++) {
+        if (line.charAt(j+1) == line.charAt(j)) {
+          count ++;
+        } else {
+          System.out.print(count + " " + line.charAt(j) + " ");
+          count = 1;
+        }
+      }
+      System.out.println();
+    }
+    hp.close();
+    */
+    ///* https://www.dmoj.ca/problem/ccc21j3
+    Scanner hp = new Scanner(System.in);
+      String dir = "";
+      for (boolean b=true; b==true; b=true) {
+        int line = hp.nextInt();
+        if (line == 99999) {
+          break;
+        } else {
+          int check = (line/10000)+((line-10000*(line/10000))/1000);
+          int steps = (line-1000*(line/1000));
+          if (check==0) {
+          } else if (check%2==0) {
+            dir = "right";
+          } else {
+            dir = "left";
+          }
+          System.out.println(dir + " " + steps);
+        }
+      }
     hp.close();
     //*/
   }
