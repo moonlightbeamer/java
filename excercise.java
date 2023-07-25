@@ -1,5 +1,21 @@
 import java.util.*;
 public class excercise {
+
+  public static class Student {
+    String name;                          //data type
+    int mark;
+
+    public String record() {              // method
+      String s = name + String.valueOf(mark);
+      return s;
+    }
+
+    public Student(String n, int m) {     // constructor
+      name = n;
+      mark = m;
+    }
+  }
+
   public static void main(String[] args) {
     /* accepting input of multiple integers in one line
       Scanner hp = new Scanner(System.in);
@@ -147,10 +163,10 @@ public class excercise {
     }
     hp.close();
     */
-    ///* https://www.dmoj.ca/problem/ccc21j3
+    /* https://www.dmoj.ca/problem/ccc21j3
     Scanner hp = new Scanner(System.in);
       String dir = "";
-      for (boolean b=true; b==true; b=true) {
+      for (;;) {
         int line = hp.nextInt();
         if (line == 99999) {
           break;
@@ -167,6 +183,12 @@ public class excercise {
         }
       }
     hp.close();
+    */
+    ///* 
+    Student lin = new Student("lin", 100);
+    System.out.println(lin.name);
+    System.out.println(lin.mark);
+    System.out.println(lin.record());
     //*/
   }
 }
