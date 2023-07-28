@@ -190,7 +190,7 @@ public class excercise {
     System.out.println(lin.mark);
     System.out.println(lin.record());
     */
-    ///*
+    ///* https://www.dmoj.ca/problem/ccc19j2
     Scanner hp = new Scanner(System.in);
     int h = hp.nextInt();
     int M = hp.nextInt();
