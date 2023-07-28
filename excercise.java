@@ -184,11 +184,30 @@ public class excercise {
       }
     hp.close();
     */
-    ///* 
+    /* 
     Student lin = new Student("lin", 100);
     System.out.println(lin.name);
     System.out.println(lin.mark);
     System.out.println(lin.record());
+    */
+    ///*
+    Scanner hp = new Scanner(System.in);
+    int h = hp.nextInt();
+    int M = hp.nextInt();
+    int t = 1;
+    int A = (-6)*t*t*t*t + h*t*t*t + 2*t*t + t;
+    while (true) {
+      A = (-6)*t*t*t*t + h*t*t*t + 2*t*t + t;
+      if (t>M && A>0) {
+        System.out.println("The balloon does not touch ground in the given time"+".");
+        break;
+      }
+      if (A<=0) {
+        System.out.println("The balloon first touches ground at hour:\n"+t);
+        break;
+      } else t++;
+    }
+    hp.close();
     //*/
   }
 }
